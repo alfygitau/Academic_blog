@@ -12,7 +12,7 @@ const Header = () => {
       <div className="links">
         <ul className="link-list">
           <li>
-            <a href="/home">HOME</a>
+            <a href="/">HOME</a>
           </li>
           <li>
             <a href="/articles">ARTICLES</a>

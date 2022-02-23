@@ -4,6 +4,8 @@ import image2 from "../../assets/home2.png";
 import image3 from "../../assets/home3.svg";
 import image4 from "../../assets/home4.png";
 import "./Home.css";
+import Button from "react-bootstrap/Button";
+import { VscDebugStart } from "react-icons/vsc";
 
 const Home = () => {
   return (
@@ -18,6 +20,9 @@ const Home = () => {
             tap into a large collection of expert blog writers with
             years of experience across different subject matters.
           </p>
+          <Button variant="info">
+            Get Started | <VscDebugStart />
+          </Button>
         </div>
       </div>
       <div className="home1">
@@ -30,6 +35,9 @@ const Home = () => {
             but we’ll also format it to make sure it looks good and
             we’ll even add a photo to it!
           </p>
+          <Button variant="info">
+            Get Started | <VscDebugStart />
+          </Button>
         </div>
         <img src={image2} alt="home2" />
       </div>
@@ -44,6 +52,9 @@ const Home = () => {
             reject. You can even make changes to the content yourself
             directly.
           </p>
+          <Button variant="info">
+            Get Started | <VscDebugStart />
+          </Button>
         </div>
       </div>
       <div className="home1">
@@ -55,6 +66,9 @@ const Home = () => {
             published in your industry and have been vetted by our
             staff to ensure they’re the perfect fit for you.
           </p>
+          <Button variant="info">
+            Get Started | <VscDebugStart />
+          </Button>
         </div>
         <img src={image4} alt="home4" />
       </div>
