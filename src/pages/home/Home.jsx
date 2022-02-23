@@ -3,7 +3,6 @@ import image1 from "../../assets/home1.png";
 import image2 from "../../assets/home2.png";
 import image3 from "../../assets/home3.svg";
 import image4 from "../../assets/home4.png";
-import image5 from "../../assets/home5.svg";
 import "./Home.css";
 
 const Home = () => {
