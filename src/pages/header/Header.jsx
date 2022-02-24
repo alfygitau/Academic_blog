@@ -6,16 +6,15 @@ import { logoutInitiate } from "../../redux/actions/actions";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem("user"))
+  const user = JSON.parse(localStorage.getItem("user"));
+  
 
   const handleLogout = () => {
     dispatch(logoutInitiate());
-    navigate('/login')
-
+    navigate("/login");
   };
 
   return (

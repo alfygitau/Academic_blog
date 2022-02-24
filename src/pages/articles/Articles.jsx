@@ -17,6 +17,16 @@ const Articles = () => {
     fetchArticles();
   }, []);
 
+  const handleDelete = async (id) => {
+    await axios
+      .delete(`http://localhost:8000/articles/${id}`)
+      .then((response) => {
+          const remainingarticles = articles.filter(article=>article.id !== id);
+          setArticles(remainingarticles)
+        console.log(response.data);
+      });
+  };
+
   return (
     <div className="articles-list">
       {articles?.map((article) => (
@@ -26,6 +36,8 @@ const Articles = () => {
           key={article.id}
           author={article.author}
           created_at={article.created_at}
+          handleDelete={handleDelete}
+          id={article.id}
         />
       ))}
     </div>
