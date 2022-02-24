@@ -1,0 +1,18 @@
+.create_article_container{
+    width: 50%;
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    border: 0.5px solid rgb(235,235,235);
+    padding: 20px;
+    border-radius: 10px;
+}
+.create_article_container form button{
+    margin-top: 20px;
+}
+.create_article_container form h6{
+    padding-bottom: 20px;
+}
+.datepicker{
+    padding-bottom: 20px;
+}
