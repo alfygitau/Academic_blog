@@ -8,8 +8,8 @@ import Login from './pages/login/Login';
 function App() {
   return (
     <div>
-      <Header/>
       <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/articles' element={<Articles/>}/>

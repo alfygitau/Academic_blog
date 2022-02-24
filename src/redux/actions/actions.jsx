@@ -4,6 +4,7 @@ import {
   LOGIN_FAIL,
   LOGIN_START,
   LOGIN_SUCCESS,
+  LOGOUT,
 } from "./actionTypes";
 
 export const loginStart = () => ({
@@ -36,11 +37,23 @@ export const loginInitiate = (username, password) => {
         const user = response.data;
         if (user.id === decodedUser.id) {
           dispatch(loginSuccess(user));
+          localStorage.setItem("user", JSON.stringify(user));
         }
       })
       .catch((error) => {
         console.log(error);
         dispatch(loginFail(error.message));
       });
+  };
+};
+
+export const logout = () => ({
+  type: LOGOUT,
+});
+
+export const logoutInitiate = () => {
+  return function (dispatch) {
+    dispatch(logout());
+    localStorage.removeItem("user")
   };
 };
