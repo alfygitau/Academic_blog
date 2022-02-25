@@ -17,6 +17,7 @@ const CreateArticle = () => {
     setTags(value);
   };
 
+
   const data = { author, title, body, date, reactions, tags };
   console.log("data", data);
 
@@ -30,7 +31,7 @@ const CreateArticle = () => {
         author,
         title,
         body,
-        date,
+        created_at: date,
         reactions,
         tags,
       })
